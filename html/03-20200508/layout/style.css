@@ -1,0 +1,27 @@
+.nam-giua {
+    text-align: center;
+}
+
+.mau-nen-xam {
+    background-color: gray;
+}
+
+.chu-trang {
+    color: white;
+}
+
+.div-cha {
+    display: flex;
+}
+
+.div-thu-nhat {
+    width: 25%;
+    height: 100px;
+    /* background-color: goldenrod; */
+}
+
+.div-thu-hai {
+    width: 75%;
+    height: 300px;
+    /* background-color: hotpink; */
+}

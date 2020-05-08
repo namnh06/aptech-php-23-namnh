@@ -25,3 +25,7 @@
     height: 300px;
     /* background-color: hotpink; */
 }
+
+.khong-co-ky-hieu {
+    list-style-type: none;
+}

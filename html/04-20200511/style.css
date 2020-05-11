@@ -1,0 +1,79 @@
+.first {
+    background-color: yellow;
+    display: flex;
+}
+
+.first-1 {
+    background-color: blue;
+    height: 50px;
+    width: 70%;
+}
+
+.first-2 {
+    background-color: green;
+    height: 50px;
+    width: 30%;
+}
+
+.second {
+    background-color: yellow;
+    display: flex;
+}
+
+.second-1 {
+    background-color: blue;
+    height: 150px;
+    width: 50%;
+}
+
+.second-2 {
+    background-color: green;
+    height: 150px;
+    width: 50%;
+    display: flex;
+}
+
+.second-1-1 {
+    background-color: red;
+    height: 75px;
+}
+
+.second-1-2 {
+    background-color: pink;
+    height: 75px;
+}
+
+.second-2-1 {
+    background-color: purple;
+    height: 150px;
+    width: 50%;
+}
+
+.second-2-2 {
+    background-color: black;
+    height: 150px;
+    width: 50%;
+}
+
+.third {
+    display: flex;
+}
+
+.third-1,
+.third-2,
+.third-3 {
+    height: 50px;
+    width: 33.33%;
+}
+
+.third-1 {
+    background-color: green;
+}
+
+.third-2 {
+    background-color: blue;
+}
+
+.third-3 {
+    background-color: red;
+}

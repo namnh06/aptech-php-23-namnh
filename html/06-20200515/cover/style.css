@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+}
+
+.home {
+    border-bottom: 5px solid white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    border-bottom: 5px solid gray;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1 id="chu">Aptech PHP 23</h1>
+    <button id="btn">An Chu</button>
+    <!-- <button onclick="doiChu()">Doi Chu</button>
+    <script>
+        function doiChu() {
+            $("#chu").html("Xin Chao");
+        }
+    </script> -->
+    <!-- <script>
+        document.getElementById('chu').innerHTML = '123';
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            // $('#chu').html('Xin chao');
+            $('#chu').click(function () {
+                $(this).hide();
+            });
+            $('#btn').click(function () {
+                $('#chu').hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

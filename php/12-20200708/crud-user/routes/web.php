@@ -25,3 +25,8 @@ Route::get('/users/{user}', 'UserController@show'); // xem chi tiet nguoi dung
 
 Route::delete('/users/{id}', 'UserController@destroy');
 Route::post('/users', 'UserController@store');
+
+// update
+Route::get('/users/{user}/edit', 'UserController@edit');
+Route::patch('/users/{user}', 'UserController@update');
+// Route::resource('users', 'UserController');

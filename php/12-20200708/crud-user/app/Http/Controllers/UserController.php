@@ -44,7 +44,12 @@ class UserController extends Controller
         //     return 'email  khong co @ thi k duoc phep'
         // }
         // echo $_POST['name'];
-        DB::table('users')->insert([
+        // DB::table('users')->insert([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'password' => bcrypt($request->password)
+        // ]);
+        User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password)
@@ -81,7 +86,10 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        // dd($user);
+        return view('users.edit', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -93,7 +101,16 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        // $user->update([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'password' => bcrypt($request->password)
+        // ]);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->save();
+        return redirect()->route('trang-chu');
     }
 
     /**
@@ -102,7 +119,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    // public function destroy(User $user)
+    // public function destroy(User $user) --> $user->delete();
     public function destroy($id)
     {
         User::destroy($id);

@@ -20,6 +20,8 @@ Route::get('/users', 'UserController@index')->name('trang-chu');
 // Route::get('/users/{id}', function ($id) {
 //     return 'Toi la user so ' . $id;
 // });
-Route::get('/users/{user}', 'UserController@show');
+Route::get('/users/create', 'UserController@create'); // lay form them nguoi dung
+Route::get('/users/{user}', 'UserController@show'); // xem chi tiet nguoi dung
 
 Route::delete('/users/{id}', 'UserController@destroy');
+Route::post('/users', 'UserController@store');

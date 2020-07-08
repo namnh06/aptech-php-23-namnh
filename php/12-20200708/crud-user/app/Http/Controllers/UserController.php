@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -28,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -39,7 +40,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // if($request->email khong co @){
+        //     return 'email  khong co @ thi k duoc phep'
+        // }
+        // echo $_POST['name'];
+        DB::table('users')->insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+        ]);
+        return redirect()->route('trang-chu');
     }
 
     /**

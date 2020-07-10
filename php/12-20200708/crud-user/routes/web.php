@@ -24,7 +24,7 @@ Route::get('/users/create', 'UserController@create'); // lay form them nguoi dun
 Route::get('/users/{user}', 'UserController@show'); // xem chi tiet nguoi dung
 
 Route::delete('/users/{id}', 'UserController@destroy');
-Route::post('/users', 'UserController@store');
+Route::post('/luu-nguoi-dung', 'UserController@store')->name('users.store');
 
 // update
 Route::get('/users/{user}/edit', 'UserController@edit');

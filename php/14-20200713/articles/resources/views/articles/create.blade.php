@@ -15,14 +15,25 @@
             <label for="title">Title:</label>
             <input type="text" id="title" name="title">
         </div>
+        <hr>
         <div>
             <label for="description">Description:</label>
             <textarea rows="5" cols="50" id="description" name="description"></textarea>
         </div>
+        <hr>
         <div>
             <label for="content">Content:</label>
             <textarea rows="50" cols="50" id="content" name="content"></textarea>
         </div>
+        <div>
+            <label for="categories">Categories:</label>
+            <select name="category" id="categories">
+                @foreach($categories as $category)
+                <option value="{{$category}}">{{$category}}</option>
+                @endforeach
+            </select>
+        </div>
+        <button type="submit">Luu Bai Viet</button>
     </form>
 
     <script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>

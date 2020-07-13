@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -14,7 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::all();
+        dd($articles);
     }
 
     /**
@@ -24,7 +26,10 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        $categories = ['Thoi Su', 'Chinh Tri', 'Phap Luat']; // lay tu DB ve
+        return view('articles.create', [
+            'categories' => $categories
+        ]);
     }
 
     /**
@@ -35,7 +40,23 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
+        $title = $request->title;
+        $slug = Str::slug($title, '-');
+        $description = $request->description;
+        $content = $request->content;
+    
+        Article::create([
+            'title' => $title,
+            'slug' => $slug,
+            'description' => $description,
+            'content' => $content
+        ]);
+        
+        // DB::table('article_category')->save([
+        //     'category_name' => $category
+        // ])
+        return redirect()->route('articles.index');
     }
 
     /**

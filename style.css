@@ -1,0 +1,60 @@
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.heading {
+  font-size: 20px;
+  text-align: center;
+  background-color: pink;
+  border-radius: 50px;
+}
+
+.box_gird_areas--list {
+  height: calc(100vh - 100px);
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-rows: 250px 50px 250px;
+  grid-template-areas: "h1 h1 h2 h3" "h4 h5 h2 h3" "h4 h5 h6 h6";
+  grid-gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-right: 100px;
+}
+.box_gird_areas--list.box_gird--item:nth-child(1) {
+  grid-area: h1;
+  transform: translateX(100px);
+}
+.box_gird_areas--list.box_gird--item:nth-child(2) {
+  grid-area: h2;
+  transform: translateX(100px);
+}
+.box_gird_areas--list.box_gird--item:nth-child(3) {
+  grid-area: h3;
+  transform: translateX(100px);
+}
+.box_gird_areas--list.box_gird--item:nth-child(4) {
+  grid-area: h4;
+  transform: translateX(100px);
+}
+.box_gird_areas--list.box_gird--item:nth-child(5) {
+  grid-area: h5;
+  transform: translateX(100px);
+}
+.box_gird_areas--list.box_gird--item:nth-child(6) {
+  grid-area: h6;
+  transform: translateX(100px);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
